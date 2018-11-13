@@ -21,8 +21,9 @@ public class SimpleTest {
     }
 
     @Test
-    public void getTitle(){
+    public void getTitle() throws InterruptedException{
         driver.navigate().to("https://www.pravda.com.ua/");
+        Thread.sleep(2000);
         String title = driver.getTitle();
         assertTrue(title.contains("Українська правда"));
     }
